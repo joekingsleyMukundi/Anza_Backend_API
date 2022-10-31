@@ -1,0 +1,10 @@
+
+create assets folder with all subfolders in the server
+script
+    mkdir assets
+    cd assets
+    mkdir videoclasses careertalks examinertalks pastpapers
+    cd videoclasses
+    mkdir videos thumbnails  && cd .. && cd careertalks
+    mkdir videos thumbnails  && cd .. && cd examinertalks
+    mkdir videos thumbnails

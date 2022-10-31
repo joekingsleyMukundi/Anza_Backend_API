@@ -1,0 +1,10 @@
+# this file handles scripts that will be excuted with derry
+
+name: derry scripts
+
+scripts:
+  rundev: nodemon --exec go run main.go --signal SIGTERM
+  build: CGO_ENABLED=0 go build -tags=jsoniter
+  buildwindows: CGO_ENABLED=1 GOOS=windows GOARCH=amd64 go build -tags=jsoniter -o bin/anzaapi.exe main.go
+  deploy: scp  -r anzaapi   root@45.88.189.81:/root/files/
+  ssh: ssh root@45.88.189.81
