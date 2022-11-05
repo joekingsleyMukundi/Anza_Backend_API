@@ -44,7 +44,7 @@ func main() {
 
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
-	client, err := mongo.Connect(ctx, options.Client().ApplyURI("mongodb://localhost:27017"))
+	client, err := mongo.Connect(ctx, options.Client().ApplyURI("mongodb+srv://ANZA-ACADEMY-DB-MAIN-USER:vFfYuBZstuK9d7uX@anza-academy-db.wqrdqvl.mongodb.net/?retryWrites=true&w=majority"))
 	if err != nil {
 		log.Fatal("unable to connect to database")
 	}
