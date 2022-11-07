@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"log"
 
+	appdatamodel "github.com/Anza2022/Anza_Backend_API/models/app_data_model"
+	"github.com/Anza2022/Anza_Backend_API/services/mongodbapi"
+	"github.com/Anza2022/Anza_Backend_API/utils/appconstants"
 	"github.com/gin-gonic/gin"
-	appdatamodel "github.com/kennedy-muthaura/anzaapi/models/app_data_model"
-	"github.com/kennedy-muthaura/anzaapi/services/mongodbapi"
-	"github.com/kennedy-muthaura/anzaapi/utils/appconstants"
 	"go.mongodb.org/mongo-driver/bson"
 )
 

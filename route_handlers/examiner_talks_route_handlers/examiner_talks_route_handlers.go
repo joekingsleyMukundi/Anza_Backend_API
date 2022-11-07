@@ -3,10 +3,10 @@ package examinertalksroutehandlers
 import (
 	"fmt"
 
+	talksmodels "github.com/Anza2022/Anza_Backend_API/models/talks_models"
+	"github.com/Anza2022/Anza_Backend_API/services/mongodbapi"
+	"github.com/Anza2022/Anza_Backend_API/utils/appconstants"
 	"github.com/gin-gonic/gin"
-	talksmodels "github.com/kennedy-muthaura/anzaapi/models/talks_models"
-	"github.com/kennedy-muthaura/anzaapi/services/mongodbapi"
-	"github.com/kennedy-muthaura/anzaapi/utils/appconstants"
 	"go.mongodb.org/mongo-driver/bson"
 )
 

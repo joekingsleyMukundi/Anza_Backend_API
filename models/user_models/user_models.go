@@ -1,6 +1,6 @@
 package usermodels
 
-import videolessons "github.com/kennedy-muthaura/anzaapi/models/video_lessons"
+import videolessons "github.com/Anza2022/Anza_Backend_API/models/video_lessons"
 
 type UserModel struct {
 	UserId        string `json:"_id" bson:"_id"`

@@ -7,12 +7,12 @@ import (
 	"net/http"
 	"os"
 
+	videolessons "github.com/Anza2022/Anza_Backend_API/models/video_lessons"
+	"github.com/Anza2022/Anza_Backend_API/services/mongodbapi"
+	"github.com/Anza2022/Anza_Backend_API/utils/appconstants"
+	helperfunctions "github.com/Anza2022/Anza_Backend_API/utils/helper_functions"
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
-	videolessons "github.com/kennedy-muthaura/anzaapi/models/video_lessons"
-	"github.com/kennedy-muthaura/anzaapi/services/mongodbapi"
-	"github.com/kennedy-muthaura/anzaapi/utils/appconstants"
-	helperfunctions "github.com/kennedy-muthaura/anzaapi/utils/helper_functions"
 	"go.mongodb.org/mongo-driver/bson"
 )
 
@@ -145,7 +145,7 @@ func AddaVideoViewInLesson(c *gin.Context) {
 	c.JSON(200, bson.M{"message": "sucess"})
 }
 
-//todo lesson notes route handlers
+// todo lesson notes route handlers
 func GetLessonsNotesHandler(c *gin.Context) {
 	var id = c.Param("lessonid")
 	notes, err := mongodbapi.GetManyDocumentsFromACollection(mongodbapi.LessonNotesCollection, bson.M{"lessonId": id})
@@ -235,7 +235,7 @@ type videoThumbnail struct {
 	Type  string                `form:"type" binding:"required"` //lesson, examiner, career
 }
 
-//size 540 *  360 max 150 kbs
+// size 540 *  360 max 150 kbs
 func UploadVideoToServer(c *gin.Context) {
 
 	var form videoLesson

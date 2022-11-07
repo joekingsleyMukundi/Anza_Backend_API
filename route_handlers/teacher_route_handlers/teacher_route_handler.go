@@ -6,9 +6,9 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	teachersmodels "github.com/kennedy-muthaura/anzaapi/models/teachers_models"
-	"github.com/kennedy-muthaura/anzaapi/services/mongodbapi"
-	"github.com/kennedy-muthaura/anzaapi/utils/appconstants"
+	teachersmodels "github.com/Anza2022/Anza_Backend_API/models/teachers_models"
+	"github.com/Anza2022/Anza_Backend_API/services/mongodbapi"
+	"github.com/Anza2022/Anza_Backend_API/utils/appconstants"
 	"go.mongodb.org/mongo-driver/bson"
 )
 

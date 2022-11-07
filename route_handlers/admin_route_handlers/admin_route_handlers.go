@@ -4,9 +4,9 @@ import (
 	"context"
 	"log"
 
+	adminmodels "github.com/Anza2022/Anza_Backend_API/models/admin_models"
+	"github.com/Anza2022/Anza_Backend_API/services/mongodbapi"
 	"github.com/gin-gonic/gin"
-	adminmodels "github.com/kennedy-muthaura/anzaapi/models/admin_models"
-	"github.com/kennedy-muthaura/anzaapi/services/mongodbapi"
 	"go.mongodb.org/mongo-driver/bson"
 )
 

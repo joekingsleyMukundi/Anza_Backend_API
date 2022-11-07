@@ -4,12 +4,12 @@ import (
 	"net/http"
 	"time"
 
+	helperfunctions "github.com/Anza2022/Anza_Backend_API/utils/helper_functions"
+	tokenhelperfunctions "github.com/Anza2022/Anza_Backend_API/utils/token_helper_functions"
 	cache "github.com/chenyahui/gin-cache"
 	"github.com/chenyahui/gin-cache/persist"
 	"github.com/gin-gonic/gin"
 	"github.com/go-redis/redis/v8"
-	helperfunctions "github.com/kennedy-muthaura/anzaapi/utils/helper_functions"
-	tokenhelperfunctions "github.com/kennedy-muthaura/anzaapi/utils/token_helper_functions"
 	"go.mongodb.org/mongo-driver/bson"
 )
 

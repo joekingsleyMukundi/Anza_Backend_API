@@ -7,14 +7,14 @@ import (
 	"strings"
 	"time"
 
+	authmodels "github.com/Anza2022/Anza_Backend_API/models/auth_models"
+	referearnmodel "github.com/Anza2022/Anza_Backend_API/models/refer_earn_model"
+	usermodels "github.com/Anza2022/Anza_Backend_API/models/user_models"
+	"github.com/Anza2022/Anza_Backend_API/services/mongodbapi"
+	"github.com/Anza2022/Anza_Backend_API/utils/appconstants"
+	helperfunctions "github.com/Anza2022/Anza_Backend_API/utils/helper_functions"
+	tokenhelperfunctions "github.com/Anza2022/Anza_Backend_API/utils/token_helper_functions"
 	"github.com/gin-gonic/gin"
-	authmodels "github.com/kennedy-muthaura/anzaapi/models/auth_models"
-	referearnmodel "github.com/kennedy-muthaura/anzaapi/models/refer_earn_model"
-	usermodels "github.com/kennedy-muthaura/anzaapi/models/user_models"
-	"github.com/kennedy-muthaura/anzaapi/services/mongodbapi"
-	"github.com/kennedy-muthaura/anzaapi/utils/appconstants"
-	helperfunctions "github.com/kennedy-muthaura/anzaapi/utils/helper_functions"
-	tokenhelperfunctions "github.com/kennedy-muthaura/anzaapi/utils/token_helper_functions"
 	"go.mongodb.org/mongo-driver/bson"
 )
 

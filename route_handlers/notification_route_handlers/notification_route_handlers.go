@@ -3,16 +3,15 @@ package notificationroutehandlers
 import (
 	"fmt"
 
+	notificationmodel "github.com/Anza2022/Anza_Backend_API/models/notification_model"
+	"github.com/Anza2022/Anza_Backend_API/services/mongodbapi"
+	"github.com/Anza2022/Anza_Backend_API/utils/appconstants"
+	helperfunctions "github.com/Anza2022/Anza_Backend_API/utils/helper_functions"
 	"github.com/gin-gonic/gin"
-	notificationmodel "github.com/kennedy-muthaura/anzaapi/models/notification_model"
-	"github.com/kennedy-muthaura/anzaapi/services/mongodbapi"
-	"github.com/kennedy-muthaura/anzaapi/utils/appconstants"
-	helperfunctions "github.com/kennedy-muthaura/anzaapi/utils/helper_functions"
 	"go.mongodb.org/mongo-driver/bson"
 )
 
 func GetAllUnreadUserNotifications(c *gin.Context) {
-
 
 	userId := c.Param("userId")
 

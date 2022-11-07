@@ -3,10 +3,10 @@ package schoolsroutehandlers
 import (
 	"fmt"
 
+	schoolmodels "github.com/Anza2022/Anza_Backend_API/models/school_models"
+	"github.com/Anza2022/Anza_Backend_API/services/mongodbapi"
+	"github.com/Anza2022/Anza_Backend_API/utils/appconstants"
 	"github.com/gin-gonic/gin"
-	schoolmodels "github.com/kennedy-muthaura/anzaapi/models/school_models"
-	"github.com/kennedy-muthaura/anzaapi/services/mongodbapi"
-	"github.com/kennedy-muthaura/anzaapi/utils/appconstants"
 	"go.mongodb.org/mongo-driver/bson"
 )
 

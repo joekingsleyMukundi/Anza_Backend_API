@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"strconv"
 
+	gamifiedquizes "github.com/Anza2022/Anza_Backend_API/models/gamified_quizes"
+	"github.com/Anza2022/Anza_Backend_API/services/mongodbapi"
+	"github.com/Anza2022/Anza_Backend_API/utils/appconstants"
+	helperfunctions "github.com/Anza2022/Anza_Backend_API/utils/helper_functions"
 	"github.com/gin-gonic/gin"
-	gamifiedquizes "github.com/kennedy-muthaura/anzaapi/models/gamified_quizes"
-	"github.com/kennedy-muthaura/anzaapi/services/mongodbapi"
-	"github.com/kennedy-muthaura/anzaapi/utils/appconstants"
-	helperfunctions "github.com/kennedy-muthaura/anzaapi/utils/helper_functions"
 	"go.mongodb.org/mongo-driver/bson"
 )
 

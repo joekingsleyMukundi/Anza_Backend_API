@@ -1,4 +1,4 @@
-module github.com/kennedy-muthaura/anzaapi
+module github.com/Anza2022/Anza_Backend_API
 
 go 1.17
 

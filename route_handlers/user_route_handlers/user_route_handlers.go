@@ -5,11 +5,11 @@ import (
 	"mime/multipart"
 	"os"
 
+	usermodels "github.com/Anza2022/Anza_Backend_API/models/user_models"
+	"github.com/Anza2022/Anza_Backend_API/services/mongodbapi"
+	"github.com/Anza2022/Anza_Backend_API/utils/appconstants"
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
-	usermodels "github.com/kennedy-muthaura/anzaapi/models/user_models"
-	"github.com/kennedy-muthaura/anzaapi/services/mongodbapi"
-	"github.com/kennedy-muthaura/anzaapi/utils/appconstants"
 	"go.mongodb.org/mongo-driver/bson"
 )
 
@@ -122,7 +122,7 @@ type ClientPhoto struct {
 	Extension   string                `form:"extension" binding:"required"`
 }
 
-//size 540 *  360 max 150 kbs
+// size 540 *  360 max 150 kbs
 func AddAHousePhoto(c *gin.Context) {
 	var photoType = c.Query("type")
 

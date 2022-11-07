@@ -5,10 +5,10 @@ import (
 	"io/ioutil"
 	"net/http"
 
+	videolessons "github.com/Anza2022/Anza_Backend_API/models/video_lessons"
+	"github.com/Anza2022/Anza_Backend_API/services/mongodbapi"
+	"github.com/Anza2022/Anza_Backend_API/utils/appconstants"
 	"github.com/gin-gonic/gin"
-	videolessons "github.com/kennedy-muthaura/anzaapi/models/video_lessons"
-	"github.com/kennedy-muthaura/anzaapi/services/mongodbapi"
-	"github.com/kennedy-muthaura/anzaapi/utils/appconstants"
 	"go.mongodb.org/mongo-driver/bson"
 )
 

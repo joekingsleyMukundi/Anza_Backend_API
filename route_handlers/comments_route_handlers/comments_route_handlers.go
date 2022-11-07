@@ -3,11 +3,11 @@ package commentsroutehandlers
 import (
 	"fmt"
 
+	commentmodel "github.com/Anza2022/Anza_Backend_API/models/comment_model"
+	"github.com/Anza2022/Anza_Backend_API/services/mongodbapi"
+	"github.com/Anza2022/Anza_Backend_API/utils/appconstants"
+	helperfunctions "github.com/Anza2022/Anza_Backend_API/utils/helper_functions"
 	"github.com/gin-gonic/gin"
-	commentmodel "github.com/kennedy-muthaura/anzaapi/models/comment_model"
-	"github.com/kennedy-muthaura/anzaapi/services/mongodbapi"
-	"github.com/kennedy-muthaura/anzaapi/utils/appconstants"
-	helperfunctions "github.com/kennedy-muthaura/anzaapi/utils/helper_functions"
 	"go.mongodb.org/mongo-driver/bson"
 )
 
