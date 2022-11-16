@@ -44,7 +44,7 @@ func main() {
 
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
-	client, err := mongo.Connect(ctx, options.Client().ApplyURI("mongodb+srv://ANZA-ACADEMY-DB-MAIN-USER:vFfYuBZstuK9d7uX@anza-academy-db.wqrdqvl.mongodb.net/?retryWrites=true&w=majority"))
+	client, err := mongo.Connect(ctx, options.Client().ApplyURI("mongodb+srv://ANZA-ACADEMY-DB-MAIN-USER:vFfYuBZstuK9d7uX@anza-academy-db.wqrdqvl.mongodb.net/AnzaAcademyDB"))
 	if err != nil {
 		log.Fatal("unable to connect to database")
 	}
@@ -213,7 +213,7 @@ func main() {
 	// 	})
 	// })
 	//todo payments routes
-	router.GET("/anzaapi/payments/mpesa/")
+	router.GET("/anzaapi/payments/mpesa/pay")
 
 	//todo notification routes
 	router.GET("/anzaapi/user_notifications/:userId", middlewares.CacheRequestMiddleware(), notificationroutehandlers.GetAllUnreadUserNotifications)

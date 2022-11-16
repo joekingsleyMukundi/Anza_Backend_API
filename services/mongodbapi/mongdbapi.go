@@ -17,9 +17,9 @@ import (
 var ctx, cancel = context.WithTimeout(context.Background(), 10*time.Second)
 
 // defer cancel()
-var client, _ = mongo.Connect(ctx, options.Client().ApplyURI("mongodb+srv://ANZA-ACADEMY-DB-MAIN-USER:vFfYuBZstuK9d7uX@anza-academy-db.wqrdqvl.mongodb.net/?retryWrites=true&w=majority"))
+var client, _ = mongo.Connect(ctx, options.Client().ApplyURI("mongodb+srv://ANZA-ACADEMY-DB-MAIN-USER:vFfYuBZstuK9d7uX@anza-academy-db.wqrdqvl.mongodb.net/AnzaAcademyDB"))
 
-var anzaacademydb = client.Database("anza-academy-db")
+var anzaacademydb = client.Database("AnzaAcademyDB")
 
 //football collections
 var UsersCollection = anzaacademydb.Collection("usersCollection")

@@ -16,7 +16,7 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 )
 
-var productionUrl = "https://api.thesigurd.com/anzaapi"
+var productionUrl = "https://anzaacademy.co"
 
 func GetAllVideoLessonsDocsHandler(c *gin.Context) {
 	lessons, err := mongodbapi.GetManyDocumentsFromACollection(mongodbapi.VideoLessonsCollection, bson.M{"classLevel": "form 3"})

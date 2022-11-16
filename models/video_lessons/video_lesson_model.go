@@ -26,6 +26,7 @@ type VideoLessonModel struct {
 	DisLikes      int64          `json:"disLikes" bson:"disLikes"`
 	VideoLength   string         `json:"videoLength" bson:"videoLength"`
 	IsPractical   bool           `json:"isPractical" bson:"isPractical"`
+	VideoCipherId string         `json:"vidCipherId" bson:"vidCipherId"`
 }
 
 func (l VideoLessonModel) ToMap() map[string]interface{} {
@@ -63,6 +64,7 @@ func (l VideoLessonModel) ToMap() map[string]interface{} {
 		"disLikes":      l.DisLikes,
 		"videoLength":   l.VideoLength,
 		"isPractical":   l.IsPractical,
+		"vidCipherId":   l.VideoCipherId,
 	}
 }
 

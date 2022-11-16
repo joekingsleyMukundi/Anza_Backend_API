@@ -115,7 +115,7 @@ func DeleteOneUserHandler(c *gin.Context) {
 //files handlers
 // var productionUrl = "http://192.168.137.195:8085/anzaapi"
 
-var productionUrl = "https://api.thesigurd.com/anzaapi"
+var productionUrl = "https://anzaacademy.co"
 
 type ClientPhoto struct {
 	ClientPhoto *multipart.FileHeader `form:"photo" binding:"required"`
