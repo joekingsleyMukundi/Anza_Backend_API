@@ -19,7 +19,7 @@ import (
 var productionUrl = "https://anzaacademy.co"
 
 func GetAllVideoLessonsDocsHandler(c *gin.Context) {
-	lessons, err := mongodbapi.GetManyDocumentsFromACollection(mongodbapi.VideoLessonsCollection, bson.M{"classLevel": "form 3"})
+	lessons, err := mongodbapi.GetManyDocumentsFromACollection(mongodbapi.VideoLessonsCollection, bson.M{})
 
 	if err != nil {
 		c.JSON(appconstants.ErrorStatusCode, map[string]string{"message": "unable to get lessons"})
