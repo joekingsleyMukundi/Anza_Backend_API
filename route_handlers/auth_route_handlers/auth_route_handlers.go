@@ -145,7 +145,7 @@ func RegisterUserHandler(c *gin.Context) {
 	//todo create referalbonus, user stats,
 	//unique key will be email
 	var invitecode = c.Query("inviteCode")
-
+        fmt.Println(invitecode)
 	var userModel usermodels.UserModel
 
 	err := c.ShouldBind(&userModel)
@@ -191,18 +191,20 @@ func RegisterUserHandler(c *gin.Context) {
 		var bonusDoc referearnmodel.ReferalBonus
 		if err = mongodbapi.ReferBonusesDataCollection.FindOne(ctx, bson.M{"bonusCode": invitecode}).Decode(&bonusDoc); err != nil {
 			invitecode = ""
+                        fmt.Println(err.Error())
 
 		} else {
 			bonusDoc.ReferredUsersIds = append(bonusDoc.ReferredUsersIds, newUserId)
-
-			bonusDoc.AmountEarned += 100
+                        fmt.Printf("%+v\n",bonusDoc)
+			fmt.Println("heyyy")
+		//	bonusDoc.AmountEarned += 100
 
 			mongodbapi.UpdateADocInCollection(bonusDoc.ToMap(), mongodbapi.ReferBonusesDataCollection, bonusDoc.Id)
 
 		}
 	}
 	//create a referer bonus model and save it
-	var newReferModel = referearnmodel.ReferalBonus{UserId: newUserId, BonusCode: helperfunctions.GenUUID(), InviteCode: invitecode, AmountEarned: 0, ReferredUsersIds: []string{}, WidthdrawnAmount: 0}
+	var newReferModel = referearnmodel.ReferalBonus{UserId: newUserId, BonusCode: helperfunctions.GenUUID(), InviteCode: invitecode, ReferredUsersIds: []string{}, WidthdrawnAmount: 0}
 	referid, err := mongodbapi.AddADocumentToCollection(newReferModel.ToMap(), mongodbapi.ReferBonusesDataCollection)
 	if err != nil {
 		c.JSON(appconstants.ErrorStatusCode, gin.H{
